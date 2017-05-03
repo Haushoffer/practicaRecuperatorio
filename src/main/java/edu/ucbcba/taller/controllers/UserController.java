@@ -74,11 +74,6 @@ public class UserController {
         return "redirect:/user/" + user.getId();
     }
 
-  /*  @RequestMapping(value = "/map/{id}", method = RequestMethod.GET)
-    public String drawMap(@PathVariable Integer id, Model model) {
-        model.addAttribute("user", userService.getUserById(id));
-        return "map";
-    }*/
 
 }
 

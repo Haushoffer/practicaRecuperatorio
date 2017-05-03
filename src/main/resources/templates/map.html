@@ -1,58 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.springframework.org/schema/jdbc">
 <head>
+    <script th:inline = "javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script>
+
+    function initialize() {
+  var map = new google.maps.Map(
+    document.getElementById('map-canvas'), {
+      center: new google.maps.LatLng(-17.371723,-66.1438380),
+      zoom: 18,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+  });
+
+  var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(-17.371723,-66.1438380),
+        map: map
+  });
+
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
     <style>
-       #map {
-        height: 800px;
-        width: 100%;
-       }
-    </style>
+#map-canvas { width  : 100%;
+        height : 800px;
+        border: solid thin #333;
+       margin-top: 20px;}
+</style>
 </head>
 <body>
-<center>
-    <h3>Map</h3>
-</center>
-<div id="map"></div>
+<div id="bb_map">
+    <p>Bolivia >:v</p>
+    <div id="map-canvas"></div>
+</div>
+
 </body>
 </html>
-<script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var uluru1 = {lat: -28.363, lng: 135.044};
-        var uluru2 = {lat: -30.363, lng: 140.044};
-        var uluru3 = {lat: -40.363, lng: 145.044};
-        var uluru4 = {lat: -50.363, lng: 150.044};
-        var uluru5 = {lat: -17.000, lng: -65.000};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-        var marker = new google.maps.Marker({
-          position: uluru1,
-          map: map
-        });
-        var marker = new google.maps.Marker({
-          position: uluru2,
-          map: map
-        });
-        var marker = new google.maps.Marker({
-          position: uluru3,
-          map: map
-        });
-        var marker = new google.maps.Marker({
-          position: uluru4,
-          map: map
-        });
-        var marker = new google.maps.Marker({
-          position: uluru5,
-          map: map
-        });
-      }
-    </script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFAHMpWAf5zY9yHjaJvuBdhfGCg6TNbEs&callback=initMap">
-</script>
