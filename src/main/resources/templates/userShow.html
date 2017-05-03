@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Example</title>
+
+</head>
+<body>
+
+<div id="header">
+    <center>
+        <a  href="/">Home</a>
+    </center>
+</div>
+<br/><br/>
+
+<div class="container">
+
+    <h2>User Details</h2>
+    <div>
+        <p th:text="${'Id:  ' + user.id}"><a href="/user/${user.id}">Id</a></p>
+        <p th:text="${'Name:  ' + user.name}">Name</p>
+        <p >Parent: </p>
+        <td th:text="${user.parentId == null ? '' : user.parentId.name}">Parent</td>
+        <p><a th:href="${'/user/edit/' + user.id}">Edit</a></p>
+        <p><a th:href="${'/user/delete/' + user.id}">Delete</a></p>
+    </div>
+
+</div>
+
+</body>
+</html>

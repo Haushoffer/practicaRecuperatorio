@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Example</title>
+
+</head>
+<body>
+
+<div id="header">
+    <center>
+        <a  href="/">Home</a>
+    </center>
+</div>
+<br/><br/>
+
+<div class="container">
+
+    <h2>Location Details</h2>
+    <div>
+        <p th:text="${'Id:  ' + location.id}"><a href="/location/${location.id}">Id</a></p>
+        <p th:text="${'Latitude:  ' + location.lat}">Latitude</p>
+        <p th:text="${'Longitude:  ' + location.lng}">Longitude</p>
+        <p th:text="${'Terminal: ' + location.terminal.serial}">terminal</p>
+        <p th:text="${'Likes:  ' + location.likes}">Likes</p>
+        <a th:href="'/location/like/'+ ${location.id}" >Like</a>
+        <a th:href="'/location/dislike/'+ ${location.id}" >Dislike</a>
+        <p><a th:href="${'/location/edit/' + location.id}">Edit</a></p>
+        <p><a th:href="${'/location/delete/' + location.id}">Delete</a></p>
+    </div>
+
+</div>
+
+</body>
+</html>

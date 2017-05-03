@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Boot Example</title>
+
+</head>
+<body>
+
+<div id="header">
+    <center>
+        <a  href="/">Home</a>
+    </center>
+</div>
+<br/><br/>
+
+<div class="container">
+
+    <h2>Terminal Details</h2>
+    <div>
+        <p th:text="${'Id:  ' + terminal.id}"><a href="/terminal/${terminal.id}">Id</a></p>
+        <p th:text="${'Serial:  ' + terminal.serial}">Serial</p>
+        <p th:text="${'User:  ' + terminal.user.name}">User</p>
+        <p th:text="${'Category:  ' + terminal.category.name}">Category</p>
+        <p th:text="${'Active:  ' + terminal.active}">active</p>
+        <p><a th:href="${'/terminal/edit/' + terminal.id}">Edit</a></p>
+        <p><a th:href="${'/terminal/delete/' + terminal.id}">Delete</a></p>
+    </div>
+
+</div>
+
+</body>
+</html>
