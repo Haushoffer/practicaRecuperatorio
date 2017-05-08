@@ -25,6 +25,8 @@ public class Terminal {
     @OneToMany(mappedBy = "terminal", cascade = CascadeType.ALL)
     private Set<Location> locations;
 
+
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

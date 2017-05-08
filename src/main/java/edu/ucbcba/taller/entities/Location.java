@@ -2,6 +2,7 @@ package edu.ucbcba.taller.entities;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 
 /**
  * Created by coreI7 on 30/04/2017.
@@ -13,10 +14,10 @@ public class Location {
     private Integer id;
 
     @NotNull
-    private Double lat;
+    private BigDecimal lat;
 
     @NotNull
-    private Double lng;
+    private BigDecimal lng;
 
     private Integer likes = 0;
 
@@ -32,19 +33,19 @@ public class Location {
         this.id = id;
     }
 
-    public Double getLat() {
+    public BigDecimal getLat() {
         return lat;
     }
 
-    public void setLat(Double lat) {
+    public void setLat(BigDecimal lat) {
         this.lat = lat;
     }
 
-    public Double getLng() {
+    public BigDecimal getLng() {
         return lng;
     }
 
-    public void setLng(Double lng) {
+    public void setLng(BigDecimal lng) {
         this.lng = lng;
     }
 

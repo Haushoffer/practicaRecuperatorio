@@ -3,7 +3,7 @@ package edu.ucbcba.taller.services;
 import edu.ucbcba.taller.entities.Company;
 
 /**
- * Created by JOEL on 30/04/2017.
+ * Created by coreI7 on 30/04/2017.
  */
 public interface CompanyService {
     Iterable<Company> listAllCompanies();

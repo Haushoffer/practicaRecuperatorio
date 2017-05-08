@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by JOEL on 30/04/2017.
+ * Created by coreI7 on 30/04/2017.
  */
 @Service
 public class LocationServiceImpl implements LocationService {

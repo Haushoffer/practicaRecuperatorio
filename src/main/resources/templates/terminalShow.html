@@ -23,8 +23,10 @@
         <p th:text="${'User:  ' + terminal.user.name}">User</p>
         <p th:text="${'Category:  ' + terminal.category.name}">Category</p>
         <p th:text="${'Active:  ' + terminal.active}">active</p>
+        <p><a th:href="${'/terminal/map/' + terminal.id}">Show Map</a></p>
         <p><a th:href="${'/terminal/edit/' + terminal.id}">Edit</a></p>
         <p><a th:href="${'/terminal/delete/' + terminal.id}">Delete</a></p>
+
     </div>
 
 </div>
